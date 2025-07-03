@@ -3,10 +3,9 @@ import { Link } from "react-router";
 const SignUpPage = () => {
     const handleFormSubmit = e => {
         e.preventDefault();
-        const fo  rm = e.target;
+        const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        
     };
 
   return (
