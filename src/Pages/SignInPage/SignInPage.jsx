@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const SignInPage = () => {
   return (
     <div className="hero bg-base-200 min-h-screen">
@@ -21,7 +23,7 @@ const SignInPage = () => {
                 <a className="link link-hover">Forgot password?</a>
               </div>
               <button className="btn btn-neutral mt-4">Login</button>
-              <p>Already have an account. Please <Link to="/signIn" className="font-bold underline">LogIn</Link></p>
+              <p>Don't have an account? <Link to="/signUp" className="font-bold underline">Sign up</Link></p>
             </fieldset>
           </div>
         </div>
