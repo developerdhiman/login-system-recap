@@ -24,7 +24,7 @@ const SignUpPage = () => {
               </div>
               <button className="btn btn-neutral mt-4">Create Account</button>
             </fieldset>
-            <p>Already have an account. Please <Link to="/signIn" className="">LogIn</Link></p>
+            <p>Already have an account. Please <Link to="/signIn" className="font-bold underline">LogIn</Link></p>
           </div>
         </div>
       </div>
