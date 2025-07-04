@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router";
 
 const SignInPage = () => {
@@ -8,6 +9,10 @@ const SignInPage = () => {
     const password = form.password.value;
     console.log(email, password);
   }
+
+  useEffect(()=> {
+    document.title = "DhimanBD24 || SignIn";
+  })
 
   return (
     <div className="hero bg-base-200 min-h-screen">
