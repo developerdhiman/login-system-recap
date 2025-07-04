@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const SignUpPage = () => {
     const handleSignIn = e => {
@@ -12,7 +13,9 @@ const SignUpPage = () => {
 
     useEffect(()=>{
       document.title = "DhimanBD24 || SignUp";
-    })
+    });
+
+    const authInfo = useContext(AuthContext);
 
   return (
     <div className="hero bg-base-200 min-h-screen">
