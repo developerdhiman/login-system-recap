@@ -1,20 +1,38 @@
 import { createContext } from "react";
+import auth from "../firebase/firebase.config";
 
-
-export const AuthContext = createContext(null);
+const AuthContext = createContext(null);
 
 const AuthProvider = ({children}) => {
 
+    const createUser = (e;mail, password) => {
+        setLoading(true);
+        return createUserWithEmailAndPassword(auth,email, password)
+    };
+
+    const signIn = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password)
+    };
+
+    const updateUser = (updateData) => { 
+        return updateProfile(auth.currentUser, updateData)
+    };
+
+    cosnt logOut = () => {
+        return signOut(auth);
+    };
+
+    useEffect()
 
 
     const authInfo = {
-        name: "John Doe lorem2 ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque.",
+        signIn,
+        createUser
     }
-    return(
+    return (
         <AuthContext.Provider value={authInfo}>
-            {children}
+            {children} 
         </AuthContext.Provider>
     )
-};
-
-export default AuthProvider;
+}
