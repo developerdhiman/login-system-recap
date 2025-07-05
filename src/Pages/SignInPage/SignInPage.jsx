@@ -18,8 +18,8 @@ const SignInPage = () => {
 
       })
       .catch(error => {
-        cosnt user - error.code;
-        StorageError(error.message);
+        cosnt user = error.code;
+        setError(error.message);
       })
   };
 
