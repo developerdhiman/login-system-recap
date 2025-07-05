@@ -33,7 +33,7 @@ const AuthProvider = ({children}) => {
         }
     })
 
-
+    
     const authInfo = {
         signIn,
         createUser

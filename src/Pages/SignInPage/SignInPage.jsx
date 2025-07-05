@@ -43,7 +43,7 @@ const SignInPage = () => {
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
-            <form onSubmit={handleSignUp} className="fieldset">
+            <form onSubmit={handleSignIn} className="fieldset">
               <label className="label">Email</label>
               <input name="email" type="email" className="input" placeholder="Email" />
               <label className="label">Password</label>
