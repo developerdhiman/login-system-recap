@@ -5,22 +5,25 @@ import { AuthContext } from "../../contexts/AuthContext";
 const SignInPage = () => {
   const {signIn} = useContext(AuthContext);
 
-  const handleSignUp = e => {
-    e.preventDefault();
+  const handleSignIn = e => {
+    e.preventDefault(),
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
     signIn(email, password)
-      .then(result => {
+      .then(result=> {
         const user = result.user;
         console.log(user);
-
+        form.reset();
       })
       .catch(error => {
-        cosnt user = error.code;
-        setError(error.message);
+        const errorMessage = error.errorMessage;
+        setError(errorMessage);
+        console.error("Error signing in:", errorMessage);
       })
+
   };
 
   useEffect(()=> {
