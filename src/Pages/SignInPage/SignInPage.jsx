@@ -1,14 +1,27 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const SignInPage = () => {
+  const {signIn} = useContext(AuthContext);
+
   const handleSignUp = e => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-  }
+    signIn(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+
+      })
+      .catch(error => {
+        cosnt user - error.code;
+        StorageError(error.message);
+      })
+  };
 
   useEffect(()=> {
     document.title = "DhimanBD24 || SignIn";

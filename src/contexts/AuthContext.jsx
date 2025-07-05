@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import auth from "../firebase/firebase.config";
 
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 const AuthProvider = ({children}) => {
 
@@ -43,4 +43,6 @@ const AuthProvider = ({children}) => {
             {children} 
         </AuthContext.Provider>
     )
-}
+};
+
+export default AuthProvider;
